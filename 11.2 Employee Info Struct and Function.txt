@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+using namespace std;
+
+void getInfo();
+void getDisplay();
+
+struct Address{
+int number;
+char city[20];
+string state;
+int zip;
+};
+struct Employee{
+int ID;
+char name[30];
+string title;
+Address address;
+};
+
+void getInfo(Employee &worker){
+cout<<"Employee ID Number: ";
+cin>>worker.ID;
+cout<<"Employee Name: ";
+cin.getline(worker.name,30);
+cout<<"Employee Title: ";
+getline(cin,worker.title);
+cout<<"House Number: ";
+cin>>worker.address.number;
+cout<<"City: ";
+cin.getline(worker.address.city,20);
+cin.ignore();
+cout<<"State: ";
+getline(cin,worker.address.state);
+cout<<"ZIP: ";
+cin>>worker.address.zip;
+cout<<"Input Done"<<endl;
+}
+
+void getDisplay(Employee worker){
+cout<<"Employee ID Number: "<<worker.ID<<endl;
+cout<<"Employee Name: "<<worker.name<<endl;
+cout<<"Employee Title: "<<worker.title<<endl;
+cout<<"House Number: "<<worker.address.number<<endl;
+cout<<"City: "<<worker.address.city<<endl;
+cout<<"State: "<<worker.address.state<<endl;
+cout<<"ZIP: "<<worker.address.zip<<endl;
+}
+
+int main() {
+    Employee e1;
+    cout<<"Employee Info Storage."<<endl;
+    getInfo(e1);
+    getDisplay(e1);
+    return 0;
+}

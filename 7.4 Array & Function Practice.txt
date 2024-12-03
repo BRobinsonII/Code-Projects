@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void getInfo(string [][2] , int);
+void displayInfo(string [][2] ,int);
+int main(){
+    string data[99][2];
+    int size;
+    cout<<"How many students' info needed to be input:";
+    cin>>size;
+    cin.ignore();
+    getInfo(data, size);
+    displayInfo(data, size);
+    return 0;
+}
+void getInfo(string info[][2], int size){
+    for(int i=0;i<size;i++){
+        cout<<"Info for Student "<<i+1<<":\n";
+        cout<<"Name(First name Last name): ";
+        getline(cin,info[i][0]);
+        cout<<"ID: ";
+        getline(cin,info[i][1]);
+    }
+}
+void displayInfo(string info[][2], int size){
+    for(int i=0;i,size;i++){
+    cout<<"Student "<<i+1<<"'s info: ";
+    for(int j=0;j<2;j++)
+    cout<<info[i][j]<<"  "<<endl;
+    }
+}

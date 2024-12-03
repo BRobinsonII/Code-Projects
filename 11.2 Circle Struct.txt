@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+struct Circle
+{
+    double area, perimeter, radius;
+};
+int main()
+{
+    Circle c1;
+    c1.radius;
+    cout<<"Circle Calcualtion"<<endl;
+    cout<<"Input the radius: ";
+    cin>>c1.radius;
+    c1.perimeter=3.14 * c1.radius * 2;
+    c1.area=(3.14 * c1.radius*c1.radius);
+    cout<<"Perimeter: "<<c1.perimeter<<endl;
+    cout<<"Area: "<<c1.area<<endl;
+    return 0;
+}

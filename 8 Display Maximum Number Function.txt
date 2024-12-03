@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int findLargest(int[], int);
+int findLargest(int arr[], int size){
+   int largest=0;
+   for(int i=1;i<size;i++){
+       if(arr[i]>arr[largest])
+        largest=i;
+   }
+   return arr[largest];
+}
+int main(){
+   int values[10]={13579, 26791, 26792, 33445, 55555,6248,77777,79422,85647,93121};
+    int max=findLargest(values, 10);
+    cout << "The largets number is:\n";
+    cout<<max<<endl;
+   return 0;
+}

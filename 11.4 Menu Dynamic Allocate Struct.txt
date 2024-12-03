@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct Menu {
+    string date,food;
+    double price;
+    int number;
+};
+void getInput(Menu [], int);
+void getDisplay(Menu [], int);
+
+void getInput(Menu ptr[],int size)
+{
+    for(int i=0; i<size; i++) {
+        cout<<"Input menu info: ";
+        cin.ignore();
+        getline(cin,ptr[i].date);
+        getline(cin,ptr[i].food);
+        cin>>ptr[i].price;
+        cin>>ptr[i].number;
+    }
+}
+void getDisplay(Menu ptr[], int size)
+{
+    for(int i=0; i<size; i++) {
+        cout<<"Display menu info: ";
+        cout<<ptr->date<<","<<ptr->food<<","<<ptr->price<<","<<ptr->number<<","<<endl;
+        ptr++;
+    }
+}
+int main()
+{
+    int size=3;
+    Menu *iptr1=new Menu;
+    Menu *iptr2=new Menu[size];
+    getInput(iptr1,size);
+    getDisplay(iptr1, size);
+    getInput(iptr2, size);
+    getDisplay(iptr2, size);
+    delete iptr1;
+    delete[]iptr2;
+    return 0;
+}

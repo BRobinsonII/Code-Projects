@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+void getAddress(int);
+void getAddress(int value){
+    cout<<"The address of this integer is: "<<&value<<endl;
+    cout<<"The size of this integr is: "<<sizeof(value)<<" bytes\n" ;
+    cout<<"The value of this integer is: "<<value<<endl;
+}
+int main() {
+    int num=8;
+    int num2=6;
+    getAddress(num);
+    getAddress(num2);
+    return 0;
+}

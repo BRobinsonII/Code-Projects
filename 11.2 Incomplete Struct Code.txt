@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+ struct Student{
+       int ID;
+       string name;;
+       short yearAttendance;
+       double GPA;
+   };
+int main()
+
+{
+    Student s1,s2,s3;
+    return 0;
+}

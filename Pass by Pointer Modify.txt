@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+void modify(int&);
+void modify(int& a){
+    do{
+    cout<<"Enter a positive interger: ";
+    cin>>a;    
+    }while(a<=0);
+}
+int main(){
+    int x,y,z;
+    modify(x); 
+    modify(y); 
+    modify(z);
+    cout<<"Your input is: "<<x<<","<<y<<","<<z<<endl;
+    return 0;
+}

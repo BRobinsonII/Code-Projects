@@ -1,0 +1,49 @@
+#include <iostream>
+#include<cctype>
+using namespace std;
+int main()
+{
+   char test;
+   cout<<"Enter a character: ";
+   cin.get(test);
+   cout<<"Your input is:"<<test<<endl;
+    if(isupper(test)){
+        cout<<"It's uppercase."<<endl;
+        cout<<"Convert to Lowercase:"<<endl;
+        cout<<(char)tolower(test)<<endl;
+    }else if(islower(test)){
+        cout<<"It's lowercase."<<endl;
+        cout<<"Convert to Uppercase:"<<endl;
+        cout<<(char)toupper(test)<<endl;
+    }
+    else
+        cout<<"It's not upper or lowercase."<<endl;
+    return 0;
+}
+
+//In a function
+#include <iostream>
+#include<cctype>
+using namespace std;
+void getConverse(char);
+void getConverse(char test){
+cout<<"Your input is:"<<test<<endl;
+    if(isupper(test)){
+        cout<<"It's uppercase."<<endl;
+        cout<<"Convert to Lowercase:"<<endl;
+        cout<<(char)tolower(test)<<endl;
+    }else if(islower(test)){
+        cout<<"It's lowercase."<<endl;
+        cout<<"Convert to Uppercase:"<<endl;
+        cout<<(char)toupper(test)<<endl;
+    }
+    else
+        cout<<"It's not upper or lowercase."<<endl;
+}
+int main() {
+   char test;
+   cout<<"Enter a character: ";
+   cin.get(test);
+    getConverse(test);
+    return 0;
+}

@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+enum Day {monday,tuesday,wednesday,thursday,friday};
+int main()
+{
+    Day workDay;
+workDay=monday;
+cout<<workDay<<endl;
+    return 0;
+}

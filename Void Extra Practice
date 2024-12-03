@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+void getInteger();
+void getFloat();
+void getString();
+
+int main()
+{
+ getInteger();
+ getFloat();
+ getString();
+ return 0;
+}
+
+void getInteger()
+{
+    int INT;
+    cout<<"Insert an integer: ";
+    cin>>INT;
+}
+
+void getFloat(){
+    float HIT;
+    cout<<"Insert a float number:";
+    cin>>HIT;
+}
+
+void getString(){
+    string TIE;
+    cout<<"Insert a string: ";
+    getline(cin,TIE);
+}

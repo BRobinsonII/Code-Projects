@@ -1,0 +1,16 @@
+#include <iostream>
+#include<string>
+using namespace std;
+void resizeTest(string &);
+void resizeTest(string &str){
+    str.resize(5);
+    cout<<"Using resize: ";
+}
+int main()
+{
+    string str("University");
+    cout<<"Origianl String: "<<str<<endl;
+    resizeTest(str);
+    cout<<str;
+    return 0;
+}

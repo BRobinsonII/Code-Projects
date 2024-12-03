@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+void addOne(int);
+void addOne(int *ptr){
+    *ptr+=1;
+}
+int main()
+{
+    int num=3;
+    addOne(&num);
+    cout<<num<<endl;
+    return 0;
+}
+
+//different code
+
+#include <iostream>
+using namespace std;
+void getScore(double *);
+void getFinal(double *);
+void getScore(double *score)
+{
+cout<<"Enter the test score: "<<endl;
+cin>>*score;
+}
+void getFinal(double *final)
+{
+ *final *= 0.2;
+}
+int main() 
+{
+    double grade;
+    getScore(&grade);
+    getFinal(&grade);
+    cout<<"Your test score in the final is: "<<grade<<endl;
+    return 0;
+}

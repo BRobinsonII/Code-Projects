@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+struct Triangle
+{
+    int side1,side2;
+    double side3;
+};
+int main()
+{
+    Triangle t1={3,4,5};
+    cout<<t1.side1<<endl;
+    cout<<t1.side2<<endl;
+    cout<<t1.side3<<endl;
+    return 0;
+}

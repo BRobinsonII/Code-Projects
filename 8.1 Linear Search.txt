@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int num[20]={87, 66,30,89,22,45,78,23,66,78,92,56,33,97,405,0,43,82,92,10};
+    int target=405;
+    bool found=false;
+    int position=-1;
+    int i=0;
+    while(i<20&&!found){
+        if(num[i]==target){
+            found=true;
+            position=i+1;
+        }
+        i++;
+    }
+    if(found==true)
+        cout<<"We found the target, it is at position "<<position<<"."<<endl;
+    else
+        cout<<"Sorry, the target could not be found in this array."<<endl; 
+    return 0;
+}

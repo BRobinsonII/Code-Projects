@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+int *getInput();
+int *getInput(){
+    int num;
+    cout<<"Please input an integer number; "<<endl;
+    cin>>num;
+    return (&num);
+}
+int main() 
+{
+    int *ptr;
+    ptr = getInput();
+    cout<<*ptr<<endl;
+    cout<<ptr<<endl;
+    return 0;
+}
+////
+#include <iostream>
+using namespace std;
+void getInput(int [],int);
+void getTwice(int [], int);
+void getDisplay(int [], int);
+void getInput(int arr[], int size)
+{
+    
+    for(int i=0; i<size; i++){
+        cout<<"Input integer "<<i+1<<": ";
+        cin>>arr[i];
+    }
+}
+void getTwice(int arr[], int size)
+{
+    for(int i=0;i<size;i++){
+        arr[i] *= 2;
+    }
+}
+void getDisplay(int arr[], int size)
+{
+    for(int i=0; i<5; i++){
+    cout<<arr[i]<<" ";
+    }
+}
+int main()
+{
+    int arr[5];
+    getInput(arr,5);
+    getTwice(arr,5);
+    getDisplay(arr,5);
+    return 0;
+}

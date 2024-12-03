@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+struct Grade
+{
+string name;
+double grade1;
+double grade2;
+};
+int main()
+{
+    Grade group[5];
+    for(int i=0; i<5; i++){
+    cin.ignore();//press enter first
+    cout<<"Input student "<<(i+1)<<"'s name: ";
+    getline(cin,group[i].name);
+    cout<<"Input student "<<(i+1)<<"'s quiz 1 grade: ";
+    cin>>group[i].grade1;
+    cout<<"Input student "<<(i+1)<<"'s quiz 2 grade: ";
+    cin>>group[i].grade2;
+    }
+    
+    for(int i=0; i<5; i++){
+    cout<<"Student "<<(i+1)<<"'s name is: "<<group[i].name<<endl;
+    cout<<"Student "<<(i+1)<<"'s quiz 1 grade is: "<<group[i].grade1<<endl;
+    cout<<"Student "<<(i+1)<<"'s quiz 2 grade is: "<<group[i].grade2<<endl;
+    }
+    return 0;
+}

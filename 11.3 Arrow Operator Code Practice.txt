@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+struct Final{
+  string name;
+  int ID;
+  double grade;
+};
+Final*getGrade(int);
+Final*getGrade(int size){
+Final *iptr=new Final[size];
+for(int i=0;i<size;i++){
+    cin.ignore();
+cout<<"Student's name: ";
+getline(cin,iptr[i].name);
+cout<<"Student's ID: ";
+cin>>iptr[i].ID;
+cout<<"Student's Grade: ";
+cin>>iptr[i].grade;
+}
+return iptr;
+}
+int main() {
+    int num;
+    cout<<"Student Finals System"<<endl;
+    cout<<"How many students will you get input from: ";
+    cin>>num;
+    cout<<"Press enter to continue:"<<endl;
+    Final *ptr=getGrade(num);
+    for(int i=0;i<num;i++){
+    cout<<ptr->name<<" "<<ptr->ID<<" "<<ptr->grade<<endl;
+    ptr++;
+    }
+    return 0;
+}

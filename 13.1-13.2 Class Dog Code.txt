@@ -1,0 +1,106 @@
+#include <iostream>
+using namespace std;
+class Dog{
+private:
+    string breed;
+    string size;
+    int age;
+    string color;
+public:
+    void setBreed();
+    void setSize();
+    void setAge();
+    void setColor();
+    string getBreed() const;
+    string getSize() const;
+    int getAge() const;
+    string getColor() const;
+};
+void Dog::setBreed(){
+cin.ignore();
+cout<<"Please input the dog's Breed: ";
+getline(cin,breed);
+}
+void Dog::setSize(){
+cin.ignore();   
+cout<<"Please input the dog's Size: ";
+getline(cin,size);   
+}
+void Dog::setAge(){
+do{
+cout<<"Please input the dog's Age: ";
+cin>>age;  
+}while(age<=0);
+}
+void Dog::setColor(){
+cin.ignore();
+cout<<"Please input the dog's Color: ";
+cin>>color;
+}
+string Dog::getBreed() const{
+    return breed;
+}
+int Dog::getAge() const{
+    return age;
+}
+string Dog::getSize() const{
+    return size;
+}
+string Dog::getColor() const{
+    return color;
+}
+int main(){
+    Dog d1;
+    cout<<"Dog Info"<<endl;
+    cout<<"Press enter to continue...";
+    d1.setBreed();
+    d1.setSize();
+    d1.setAge();
+    d1.setColor();
+    cout<<d1.getBreed()<<endl;
+    cout<<d1.getSize()<<endl;
+    cout<<d1.getAge()<<endl;
+    cout<<d1.getColor()<<endl;
+    
+    Dog *d2 = nullptr;
+    d2 = new Dog;
+    d2->setBreed();
+    d2->setSize();
+    d2->setAge();
+    d2->setColor();
+    cout<<d2->getBreed()<<endl;
+    cout<<d2->getSize()<<endl;
+    cout<<d2->getAge()<<endl;
+    cout<<d2->getColor()<<endl;
+    delete d2;
+    
+    Dog *d3= new Dog[3];
+    for(int i=0;i<3;i++)
+    {
+        d3[i].setBreed();
+        d3[i].setSize();
+        d3[i].setAge();
+        d3[i].setColor();
+    }
+    for(int i=0;i<3;i++)
+    {
+        cout<<"Breed: "<<d3[i].getBreed()<<endl;
+        cout<<"Size: "<<d3[i].getSize()<<endl;
+        cout<<"Age: "<<d3[i].getAge()<<endl;
+        cout<<"Color: "<<d3[i].getColor()<<endl;
+    }
+    delete [] d3;
+    
+    unique_ptr<Dog>d4(new Dog);
+    
+    d4->setBreed();
+    d4->setSize();
+    d4->setAge();
+    d4->setColor();
+    
+    cout<<d4->getBreed()<<endl;
+    cout<<d4->getSize()<<endl;
+    cout<<d4->getAge()<<endl;
+    cout<<d4->getColor()<<endl;
+    return 0;
+}

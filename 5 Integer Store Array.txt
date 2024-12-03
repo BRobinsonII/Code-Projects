@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int arr[5];
+    cout<<"Please input 5 integers."<<endl;
+    int count=0;
+    while(count<5){
+        cout<<"#"<<count+1<<":";
+        cin>>arr[count];
+        count++;
+    }
+    cout<<"Your input is: ";
+    for(int i=0;i<=4;i++)
+    cout<<arr[i]<<" "<<endl;
+
+    return 0;
+}

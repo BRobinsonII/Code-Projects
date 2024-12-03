@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+class Circle
+{
+private:
+    int radius;
+public:
+    Circle(int);
+    int getPerimeter()
+    {
+        return 2*3.14*radius;
+    }
+    int getArea()
+    {
+        return (3.14*radius*radius);
+    }
+};
+
+Circle::Circle(int r)
+{
+    radius = r;
+}
+
+int main()
+{
+    Circle r(2);
+    int p = r.getPerimeter();
+    cout<<p<<endl;
+    int area=r.getArea();
+    cout<<area<<endl;
+    return 0;
+}

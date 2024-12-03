@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+class Student
+{
+public:    
+    string name;
+    double GPA;
+    string year;
+    bool hasScholarship=false;
+};
+
+int main()
+{
+    Student s1;
+    s1.name="Byronous Robinson II";
+    s1.GPA=3.53;
+    s1.year="Junior";
+    cout<<"Student name is: "<<s1.name<<endl;
+    cout<<"Student GPA is: "<<s1.GPA<<endl;
+    cout<<"Student year is: "<<s1.year<<endl;
+    return 0;
+}

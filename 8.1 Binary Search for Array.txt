@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+int binarySearch(const int [], int, int);
+const int SIZE = 11;
+int main(){
+   int Nums[SIZE] = {7,13,15,21,30,33,48,56,62,77,80};
+   int results;   
+   int num;     
+   
+   cout << "Enter the number you wish to search for: ";
+   cin >> num;
+   
+   results = binarySearch(Nums, SIZE, num);
+
+   if (results == -1)
+      cout << "That number does not exist in the array.\n";
+   else
+   {
+      cout << "That number is found at element " << results;
+      cout << " in the array.\n";
+   }
+   return 0;
+}
+int binarySearch(const int array[], int size, int value)
+{
+   int first = 0,             
+       last = size - 1,       
+       middle,                
+       position = -1; 
+       int steps=0;
+   bool found = false;        
+
+   while (!found && first <= last)
+   {
+      middle = (first + last) / 2;
+      steps++;
+      if (array[middle] == value)      
+      {
+         found = true;
+         position = middle;
+      }
+      else if (array[middle] > value)  
+         last = middle - 1;
+      else
+         first = middle + 1;           
+   }
+   return position;
+}

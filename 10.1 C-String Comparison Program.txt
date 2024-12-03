@@ -1,0 +1,45 @@
+#include <iostream>
+#include <cstring>
+#include <string>
+using namespace std;
+void getComparison(char*, char*);
+void getSize(int &);
+char *makeCstring(int);
+void getComparison(char* test1, char* test2)
+{
+int result=strcmp(test1,test2); 
+if(result>0)
+    cout<<"The 1st c-string will show 1st."<<endl;
+else if(result<0)
+    cout<<"The 2nd c-string will show 1st."<<endl;
+else
+    cout<<"These 2 c-string are the same."<<endl;
+}
+void getSize(int &size)
+{
+    do{
+        cout<<"Input size of c-string:";
+        cin>>size;
+    }while(size<=0);
+}
+char *makeCstring(int size)
+{
+    char *iptr =new char[size];
+    cout<<"Input test contents:";
+    cin.ignore();
+    cin.getline(iptr,size);
+    return iptr;
+}
+int main()
+{
+    int size1,size2;
+    cout<<"Create 2 c-string."<<endl;
+    getSize(size1);
+    char*test1=makeCstring(size1);
+    getSize(size2);
+    char*test2=makeCstring(size2);
+    cout<<"The 1st c-string is "<<test1<<endl;
+    cout<<"The 2nd c-string is "<<test2<<endl;
+    getComparison(test1, test2);
+   return 0;
+}

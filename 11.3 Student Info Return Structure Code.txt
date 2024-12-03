@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+struct Student{
+       int ID;
+       string name;;
+       short yearAttendance;
+       double GPA;
+   };
+Student getInput();
+Student getInput(){
+Student s1;
+cin>>s1.ID;
+cin.ignore();
+getline(cin,s1.name);
+cin>>s1.yearAttendance;
+cin>>s1.GPA;
+return s1;
+}
+int main()
+{
+    Student s1;
+    s1=getInput();
+    cout<<"Student Info."<<endl;
+    cout<<"Name: "<<s1.name<<endl;
+    cout<<"ID: "<<s1.ID<<endl;
+    cout<<"Year of Attendance: "<<s1.yearAttendance<<endl;
+    cout<<"GPA: "<<s1.GPA<<endl;
+    return 0;
+}

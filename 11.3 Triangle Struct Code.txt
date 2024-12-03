@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+struct Triangle{
+double length, height, area;
+};
+void getInput(Triangle &, Triangle&);
+void getCompare(Triangle, Triangle);
+
+void getInput(Triangle &t1, Triangle &t2){
+cout<<"Input the the 1st length: ";
+cin>>t1.length;
+cout<<"Input the 1st height: ";
+cin>>t1.height;
+cout<<"Input the the 2nd length: ";
+cin>>t2.length;
+cout<<"Input the 2nd height: ";
+cin>>t2.height;
+}
+
+void getCompare(Triangle t1, Triangle t2){
+t1.area=(t1.height*t1.length)/2;
+t2.area=(t2.height*t2.length)/2;
+if(t1.area>t2.area){
+cout<<"Traingle 1 has bigger area."<<endl;
+}else if(t1.area<t2.area)
+cout<<"Triangle 2 has a bigger area."<<endl;
+}
+
+int main(){
+    Triangle t1, t2;
+    cout<<"Triangle Area Comparison."<<endl;
+    getInput(t1,t2);
+    getCompare(t1,t2);
+    return 0;
+}

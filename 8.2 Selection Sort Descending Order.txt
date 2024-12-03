@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+void selectionSort(int[], int);
+
+int main()
+{
+   const int SIZE = 5;
+
+   int values[SIZE] = { 64,25,12,22,11};
+
+   cout << "The unsorted values:\n";
+   for (int i=0;i<SIZE;i++)
+      cout << values[i] << " ";
+   cout << endl;
+
+   selectionSort(values, SIZE);
+
+   cout << "The sorted values:\n";
+   for (int i=0;i<SIZE;i++)
+      cout << values[i] << " ";
+   cout << endl;
+
+   return 0;
+}
+
+void selectionSort(int array[], int size)
+{
+   int maxIndex, maxValue;
+
+   for (int start = 0; start < (size - 1); start++)
+   {
+      maxIndex = start;
+      maxValue = array[start];
+      for (int index = start + 1; index < size; index++)
+      {
+         if (array[index] > maxValue)
+         {
+            maxValue = array[index];
+            maxIndex = index;
+         }
+      }
+      swap(array[maxIndex], array[start]);
+   }
+}
+

@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int size=20;
+    char name1[size];
+    char name2[size];
+    char major[size];
+    
+    cout<<"Enter your first name: ";
+    cin.getline(name1,size);
+    cout<<"Enter your last name: ";
+    cin.getline(name2,size);
+    cout<<"Enter your major: ";
+    cin.getline(major,size);
+    cout<<name2<<", "<<name1<<", "<<major<<endl;
+    
+    return 0;
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main(){
+   const int size=8;
+   int arr[size]={5,10,15,20,25,30,35,40};
+   int *ptr=nullptr;
+   ptr=arr;;
+   cout<<"The elements stored in this array: "<<endl;
+   cout<<"{";
+   for(int i=0; i<size;i++){
+       cout<<*ptr<<" ";
+       ptr++;
+   }
+   cout<<"}"<<endl;
+   cout<<"The reversed elements stored in this array: "<<endl;
+   cout<<"{";
+   for(int i=0; i<size;i++){
+       ptr--;
+       cout<<*ptr<<" ";
+   }
+   cout<<"}"<<endl;
+    return 0;
+}

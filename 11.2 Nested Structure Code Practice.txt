@@ -1,0 +1,27 @@
+#include <iostream>
+#include<cstring>
+using namespace std;
+struct Student{
+    int studentID;
+    string name;
+    char level[15];
+};
+struct Department{
+    string major;
+    string advisor_name;
+    Student info;
+};
+int main()
+{
+    Department Student={"Computer Science", "Dr.Lee"};
+    Student.info.studentID=3445678;
+    Student.info.name="Jon Knotts";
+    strcpy(Student.info.level, "Freshman");
+    
+    cout<<"Student's Major: "<<Student.major<<endl;
+    cout<<"Advisor's Name: "<<Student.advisor_name<<endl;
+    cout<<"Student ID: "<<Student.info.studentID<<endl;
+    cout<<"Student's Name: "<<Student.info.name<<endl;
+    cout<<"Student Level: "<<Student.info.level<<endl;
+    return 0;
+}

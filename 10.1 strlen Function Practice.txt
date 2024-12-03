@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+    int size=100;
+    char name1[size];
+    char name2[size];
+    char major[size];
+    
+    cout<<"Enter your first name: ";
+    cin.getline(name1,size);
+    cout<<"Enter your last name: ";
+    cin.getline(name2,size);
+    cout<<"Enter your major: ";
+    cin.getline(major,size);
+    cout<<name2<<", "<<name1<<", "<<major<<endl;
+    cout<<"The length of name1 is "<<strlen(name1)<<endl;
+    cout<<"The length of name2 is "<<strlen(name2)<<endl;
+    cout<<"The length of major is "<<strlen(major)<<endl;
+    return 0;
+}

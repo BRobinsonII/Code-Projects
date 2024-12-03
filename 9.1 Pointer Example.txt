@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num=42;
+    int *ptr=nullptr;
+    ptr = &num;
+    cout<<"Address: "<<&num<<endl;
+    cout<<"Value: "<<num<<endl;
+    *ptr=15;
+    cout<<"Address: "<<ptr<<endl;
+    cout<<"Value: "<<*ptr<<endl;
+    return 0;
+}

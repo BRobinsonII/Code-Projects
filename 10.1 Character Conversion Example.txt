@@ -1,0 +1,11 @@
+#include <iostream>
+#include<cctype>
+using namespace std;
+
+int main()
+{
+    cout<<(char)toupper('a')<<endl;
+    cout<<(char)tolower('A')<<endl;
+    cout<<(char)tolower('*')<<endl;
+    return 0;
+}

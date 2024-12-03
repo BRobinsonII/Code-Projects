@@ -1,0 +1,17 @@
+#include <iostream>
+#include<string>
+using namespace std;
+int main(){
+    const int num_stu=5;
+    int ids[num_stu];
+    string name;
+    cout<< "Enter the students name and id."<<endl;
+    for (int count=0; count<num_stu; count++){
+        cout<<"Student #"<<(count+1)<<" name is: "<<endl;
+        getline(cin,name);
+        cout<<"Student #"<<(count+1)<<" id is: "<<endl;
+        cin>>ids[count];
+        cin.ignore();
+    }
+    return 0;
+}
